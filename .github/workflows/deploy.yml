@@ -19,5 +19,6 @@ jobs:
 
       - name: Deploy with Fly.io
         run: flyctl deploy --remote-only -a biblio-api
+        working-directory: ./biblio-api
         env:
           FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
