@@ -1,0 +1,17 @@
+app = "biblio-app"
+primary_region = "arn"
+
+[build]
+
+[env]
+PORT = "3838"
+
+[[services]]
+  internal_port = 3838
+  protocol = "tcp"
+
+  [[services.ports]]
+    port = 80
+
+  [[services.ports]]
+    port = 443
