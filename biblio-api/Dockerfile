@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install -y \
     curl \
     && rm -rf /var/lib/apt/lists/*
 
-RUN R -e 'install.packages(c("dplyr", "here", "jsonlite", "plumber", "RSQLite"))'
+RUN R -e 'install.packages(c("dplyr", "here", "plumber", "RSQLite"))'
 
 COPY . /app
 WORKDIR /app

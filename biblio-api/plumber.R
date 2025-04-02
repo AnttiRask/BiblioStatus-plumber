@@ -1,7 +1,6 @@
 # Load required libraries
 library(dplyr)
 library(here)
-library(jsonlite)
 library(plumber)
 library(RSQLite)
 
