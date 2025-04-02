@@ -1,6 +1,9 @@
 app = "biblio-api"
 primary_region = "arn"
 
+[build]
+dockerfile = "Dockerfile"
+
 [env]
   PORT = "8000"
 
