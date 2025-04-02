@@ -7,9 +7,9 @@ RUN apt-get update && apt-get install -y \
     curl \
     && rm -rf /var/lib/apt/lists/*
 
-RUN R -e "install.packages(c('dplyr', 'here', 'plumber', 'RSQLite'))"
+RUN Rscript -e 'install.packages("renv"); renv::restore()'
 
-COPY . /app
 WORKDIR /app
+COPY . /app
 
 EXPOSE 8000
