@@ -7,6 +7,9 @@ library(RSQLite)
 # Load helper functions from your existing script
 source(here("functions.R"))
 
+# Uncomment for the local version
+# source(here("biblio-api/functions.R"))
+
 #* Health check
 #* @get /ping
 function() {
