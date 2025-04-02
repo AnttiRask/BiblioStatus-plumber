@@ -3,7 +3,8 @@ name: Deploy to Fly.io
 on:
   push:
     branches:
-      - main  # Change if your default branch is different
+      - main # Automatically run on push to main
+  workflow_dispatch: # Enables manual triggering from GitHub UI
 
 jobs:
   deploy:
