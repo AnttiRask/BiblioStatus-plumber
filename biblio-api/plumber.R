@@ -6,7 +6,7 @@ library(plumber)
 library(RSQLite)
 
 # Load helper functions from your existing script
-source(here("biblio-api/functions.R"))
+source(here("functions.R"))
 
 #* Health check
 #* @get /ping
