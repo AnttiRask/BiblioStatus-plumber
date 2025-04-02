@@ -7,7 +7,8 @@ RUN apt-get update && apt-get install -y \
     curl \
     && rm -rf /var/lib/apt/lists/*
 
-RUN R -e 'install.packages(c("dplyr", "here", "plumber", "RSQLite"))'
+RUN R -e "install.packages(c('remotes'))"
+RUN R -e "install.packages(c('dplyr', 'here', 'plumber', 'RSQLite'), repos='https://cloud.r-project.org')"
 
 COPY . /app
 WORKDIR /app
