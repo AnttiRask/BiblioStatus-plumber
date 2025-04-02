@@ -1,0 +1,14 @@
+FROM rocker/r-ver:4.3.1
+
+RUN apt-get update && apt-get install -y \
+    libsqlite3-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN R -e "install.packages(c('plumber', 'DBI', 'RSQLite', 'dplyr', 'here'))"
+
+COPY . /app
+WORKDIR /app
+
+EXPOSE 8000
+
+CMD ["R", "-e", "pr <- plumber::pr('plumber.R'); pr$run(host='0.0.0.0', port=8000)"]
