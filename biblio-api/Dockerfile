@@ -5,6 +5,7 @@ RUN apt-get update && apt-get install -y \
     libsqlite3-dev \
     libsodium-dev \
     libssl-dev \
+    libcurl4-openssl-dev \
     curl \
     && rm -rf /var/lib/apt/lists/*
 
